@@ -1,0 +1,53 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+<meta name="theme-color" content="#0F2A44" />
+<meta name="description" content="Teacher OMR test manager: paper to results with trustworthy review." />
+<title>OMR Test Manager</title>
+<link rel="manifest" href="./manifest.webmanifest" />
+<link rel="icon" type="image/svg+xml" href="./assets/icon.svg" />
+<link rel="apple-touch-icon" href="./assets/icon.svg" />
+<link rel="stylesheet" href="./styles.css" />
+</head>
+<body>
+<a class="skip" href="#view">Skip to content</a>
+<div class="shell">
+  <aside class="sidebar" aria-label="Primary">
+    <div class="brand">
+      <img src="./assets/icon.svg" alt="" width="32" height="32" />
+      <div><strong class="brand-name">OMR Manager</strong><small>Teacher PWA</small></div>
+    </div>
+    <nav class="side-nav">
+      <a href="#/dashboard" data-nav="dashboard">Dashboard</a>
+      <a href="#/tests" data-nav="tests">Tests</a>
+      <a href="#/create" data-nav="create" class="primary-link">+ Create Test</a>
+      <a href="#/results" data-nav="results">Results</a>
+      <a href="#/settings" data-nav="settings">Settings</a>
+    </nav>
+    <p class="side-hint">Private teacher data stays on this device in this version.</p>
+  </aside>
+  <div class="main-col">
+    <header class="topbar">
+      <div class="brand mini">
+        <img src="./assets/icon.svg" alt="" width="28" height="28" />
+        <strong>OMR Manager</strong>
+      </div>
+      <div class="top-actions"><span id="syncState" class="pill">Offline-ready</span></div>
+    </header>
+    <main id="view" class="view" tabindex="-1" aria-live="polite"></main>
+  </div>
+</div>
+<nav class="bottomnav" aria-label="Primary mobile">
+  <a href="#/dashboard" data-nav="dashboard"><span class="ic">⌂</span><span>Home</span></a>
+  <a href="#/tests" data-nav="tests"><span class="ic">▤</span><span>Tests</span></a>
+  <a href="#/create" data-nav="create" class="fab" aria-label="Create test"><span class="ic">+</span><span>Create</span></a>
+  <a href="#/results" data-nav="results"><span class="ic">✓</span><span>Results</span></a>
+  <a href="#/settings" data-nav="settings"><span class="ic">⚙</span><span>Settings</span></a>
+</nav>
+<div id="toast" class="toast" role="status" aria-live="polite"></div>
+<div id="printRoot"></div>
+<script type="module" src="./js/app.js"></script>
+</body>
+</html>
